@@ -1,0 +1,3 @@
+Kun käyttäjä luo uusi muistiinpano (sivulla https://studies.cs.helsinki.fi/exampleapp/spa), menee asiat seuraavasti:
+
+1: Selain ---> palvelin | new_note HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa (Meidän note on postattu palvelimelle)
