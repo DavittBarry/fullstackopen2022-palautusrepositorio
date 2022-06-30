@@ -1,9 +1,9 @@
 Kun käyttäjä luo uusi muistiinpano (sivulla https://studies.cs.helsinki.fi/exampleapp/notes), menee asiat seuraavasti:
 
 1: Selain ---> palvelin | new_note HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note
-2: Palvelin ---> selain | new_note HTTP GET https://studies.cs.helsinki.fi/exampleapp/notes
-3:
-4:
+2: Palvelin ---> selain | notes HTTP GET https://studies.cs.helsinki.fi/exampleapp/notes
+3: Palvelin ---> selain | main.css HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css
+4: Palvelin ---> selain | main.js HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.js
 5:
 6:
 7:
