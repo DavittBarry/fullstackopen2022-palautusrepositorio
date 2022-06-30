@@ -1,12 +1,8 @@
 Kun käyttäjä luo uusi muistiinpano (sivulla https://studies.cs.helsinki.fi/exampleapp/notes), menee asiat seuraavasti:
 
-1: Selain ---> palvelin | new_note HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note
-2: Palvelin ---> selain | notes HTTP GET https://studies.cs.helsinki.fi/exampleapp/notes
-3: Palvelin ---> selain | main.css HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css
-4: Palvelin ---> selain | main.js HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.js
-5:
-6:
-7:
-8:
-9:
-10:
+1: Selain ---> palvelin | new_note HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note (Meidän note on postattu palvelimelle)
+2: Palvelin ---> selain | notes HTTP GET https://studies.cs.helsinki.fi/exampleapp/notes (selain ottaa jo olevat viesit palvelimelta)
+3: Palvelin ---> selain | main.css HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css (selain ottaa css-tyylit palvelimelta)
+4: Palvelin ---> selain | main.js HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.js (selain ottaa js:ää palvelimelta)
+5: Palvelin ---> selain | data.json HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json (selain ottaa data.json palvelimelta)
+6: Palvelin ---> selain | favicon.ico HTTP GET https://studies.cs.helsinki.fi/favicon.ico
