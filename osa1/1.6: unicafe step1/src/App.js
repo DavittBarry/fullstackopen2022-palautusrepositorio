@@ -1,12 +1,18 @@
 import { useState } from 'react';
 
+// Ensin, luon Display komponentti joka suorittaa text div:in.
+
 const Display = props => <div>{props.text}</div>;
+
+// Sitten, luodaan näppäinten komponentti
 
 const Buttons = (props) => (
     <button onClick={props.handleClick}>
       {props.text}
     </button>
   );
+
+// Stats:in lopputulos.
 
 const Statistics = (props) => (
   <div>
@@ -18,7 +24,6 @@ const Statistics = (props) => (
 );
 
 const App = () => {
-  // tallenna napit omaan tilaansa
   const [good, setGood] = useState(0)
   const [neutral, setNeutral] = useState(0)
   const [bad, setBad] = useState(0)
@@ -30,7 +35,7 @@ const App = () => {
       <Buttons handleClick={() => setGood(+1)} text="Good" />
       <Buttons handleClick={() => setNeutral(+1)} text="Neutral" />
       <Buttons handleClick={() => setBad(+1)} text="Bad" />
-      <Statistics good={good} neutral={neutral} bad={neutral} />
+      <Statistics good={good} neutral={neutral} bad={bad} />
     </div>
   )
 };
