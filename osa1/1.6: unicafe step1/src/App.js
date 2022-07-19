@@ -32,9 +32,9 @@ const App = () => {
     <div>
       <Display />
       <h1>Please give us your feedback!</h1>
-      <Buttons handleClick={() => setGood(+1)} text="Good" />
-      <Buttons handleClick={() => setNeutral(+1)} text="Neutral" />
-      <Buttons handleClick={() => setBad(+1)} text="Bad" />
+      <Buttons handleClick={() => setGood(good + 1)} text="Good" />
+      <Buttons handleClick={() => setNeutral(neutral + 1)} text="Neutral" />
+      <Buttons handleClick={() => setBad(bad + 1)} text="Bad" />
       <Statistics good={good} neutral={neutral} bad={bad} />
     </div>
   )
