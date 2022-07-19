@@ -16,6 +16,8 @@ const Buttons = (props) => (
 
 const Statistics = (props) => {
 
+  // Teen merkkijonoja missä on kaikki forumulat ennen kun kutsun niitä. 
+
   const totalgoodbad = props.good + props.bad + props.neutral;
   const average = Math.floor(((props.good - props.bad) / totalgoodbad) * 100) / 100;
   const positive = Math.floor((props.good / totalgoodbad) * 100);
