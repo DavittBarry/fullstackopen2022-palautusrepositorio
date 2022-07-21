@@ -37,7 +37,7 @@ const Statistics = (props) => {
     return(
       <div>
         <h1>Statistics:</h1>
-        <p>Stats are shows when feedback is given.</p>
+        <p>Stats are shown when feedback is given.</p>
       </div>
     )
     }
