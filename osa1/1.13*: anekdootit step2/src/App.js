@@ -13,9 +13,10 @@ const App = () => {
   
   const [selected, setSelected] = useState(0);
   const [votes, setVotes] = useState(Array(anecdotes.length).fill(0)); // Tämä luo React tilaa taulukkona. 
+  const newVotes = [...votes]
 
   const handleVotes = () => {
-    const newVotes = [...votes]
+    
     newVotes[selected] += 1;
     setVotes(newVotes);
     console.log(newVotes)
@@ -37,6 +38,7 @@ const App = () => {
     <div>
       <h1>Random anecdote generator:</h1>
       <p>{anecdotes[selected]}</p>
+      <p>Current anecdote vote count: {newVotes[selected]}</p>
       <button onClick={handleVotes}>Vote</button>
       <button onClick={handleClick}>Generate random anecdote</button>
     </div>
