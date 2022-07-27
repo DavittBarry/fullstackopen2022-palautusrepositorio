@@ -16,7 +16,6 @@ const App = () => {
   const newVotes = [...votes]
 
   const handleVotes = () => {
-    
     newVotes[selected] += 1;
     setVotes(newVotes);
     console.log(newVotes)
