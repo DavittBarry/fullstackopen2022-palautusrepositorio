@@ -54,7 +54,6 @@ const App = () => {
         max = arr[i];
         };
     };
-
       return maxIndex;
   };
 
