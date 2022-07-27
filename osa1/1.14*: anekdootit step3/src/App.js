@@ -41,19 +41,19 @@ const App = () => {
 // indexOfMax:lla tulostetaan se taulokon index missä oli korkein numero.
 
   function indexOfMax(arr) {
-      if (arr.length === 0) {
-          return -1;
-      }
+    if (arr.length === 0) {
+      return -1;
+    };
 
-      var max = arr[0];
-      var maxIndex = 0;
+    var max = arr[0];
+    var maxIndex = 0;
 
-      for (var i = 1; i < arr.length; i++) {
-          if (arr[i] > max) {
-              maxIndex = i;
-              max = arr[i];
-          }
-      }
+    for (var i = 1; i < arr.length; i++) {
+      if (arr[i] > max) {
+        maxIndex = i;
+        max = arr[i];
+        };
+    };
 
       return maxIndex;
   };
