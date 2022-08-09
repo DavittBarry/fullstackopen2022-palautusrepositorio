@@ -15,7 +15,7 @@ const Part = (props) => {
 const Content = ({ course }) => {
   return (
     <div>
-      {course.parts.map((part) => (
+      {course.map((part) => (
         <Part key={part.id} part={part} /> // Lähettää Part-komponentille map-versio course:sta
       ))}
     </div>
@@ -23,29 +23,25 @@ const Content = ({ course }) => {
 };
 
 const Total = ({ course }) => {
-  let total = course.parts.reduce((w, x, y, z) => {
-    console.log(`what is happening: ${y}`, z, w, x);
-    const grandTotalSum = z[0].exercises 
-                        + z[1].exercises
-                        + z[2].exercises
-                        + z[3].exercises
-    return <>{grandTotalSum}</>
-  });
-  
-  return (
-    <div>
-        <p>Total number of exercises: {total}</p>
-    </div>
-  );
-};
+    // Tässä käytetään .reduce() siten, että se laskea course:ien props jokaista taulukko-/oliosta
+    console.log(course);
+    const sumTotal = course.reduce((y, z) => {
+        return y + z.exercises;
+    }, 0);
+    return (
+        <div>
+        <h4>Total number of exercises: {sumTotal}</h4>
+        </div>
+    );
+    };
 
 const Course = ({ course }) => {
   return (
     <div>
       <Header course={course} />
-      <Content course={course} />
+      <Content course={course.parts} />
       <br/>
-      <Total course={course} />
+      <Total course={course.parts} />
     </div>
   );
 };
